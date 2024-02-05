@@ -1,0 +1,25 @@
+* {
+  color: white;
+  background-color: gray;
+}
+
+/* 이렇게 바디 태그를 사용해서 백그라운드 색을 넣어주어도 된다. */
+body {
+  background-color: gray;
+}
+
+span {
+  color: red;
+}
+
+/* id와 class 선택자 중에서 id 선택자의 우선순위가 더 높다. */
+#first {
+  background-color: blue;
+}
+
+.second {
+  background-color: green;
+}
+
+/* 선택자 우선순위
+태그 선택자 < class 선택자 < id 선택자  순으로 우선순위를 가짐*/

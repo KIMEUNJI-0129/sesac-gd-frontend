@@ -1,0 +1,25 @@
+/* 전체 선택자 */
+* {
+  color: red;
+}
+
+/* 태그 선택자 */
+/* 태그명 { 속성 : 속성값;} */
+/* 해당 태그가 사용딘 모든 요소 선택 */
+li {
+  background-color: aqua;
+}
+
+/* class 선택자  */
+/* html 내에서 해당 class를 가진 요소 선택 */
+/* .클래스명 { 속성 : 속성값; } */
+.red {
+  background-color: pink;
+}
+
+/* id 선택자 */
+/* html에서 해당 id를 가진 요소 선택 */
+/* #id명 { 속성 : 속성값;} */
+#li-orange {
+  background-color: orange;
+}

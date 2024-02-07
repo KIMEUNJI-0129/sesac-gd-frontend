@@ -1,0 +1,24 @@
+th:first-child {
+  color: red;
+}
+
+th:last-child {
+  color: blue;
+}
+
+td:first-child:nth-of-type(7n + 1) {
+  color: red;
+}
+
+td:nth-of-type(7n) {
+  color: blue;
+}
+
+caption {
+  text-align: center;
+  color: green;
+}
+
+* {
+  background-color: yellow;
+}

@@ -21,5 +21,9 @@ span {
   background-color: green;
 }
 
+.third {
+  background-color: aqua;
+}
+
 /* 선택자 우선순위
 태그 선택자 < class 선택자 < id 선택자  순으로 우선순위를 가짐*/

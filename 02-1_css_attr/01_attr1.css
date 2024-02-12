@@ -167,7 +167,7 @@
   border: 3px solid black;
   /* 굵기(border-width), 스타일(border-style), 색상(border-color) 각각 지정 가능 */
   border-width: 1px;
-  border-style: dotted;
+  border-style: solid;
   border-color: red orange yellow green;
   border-right: 5px solid orange;
   border-bottom: 5px solid gray;
@@ -189,7 +189,7 @@
   height: 100px;
   padding: 20px;
   border: 15px solid red;
-  background-color: orange;
+  background-color: blue;
 }
 
 .content-box {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prac04</title>
+    <style>
+      /* 가상 클래스 선택자 실습(내거) */
+      .stripes > *:nth-child(2n) {
+        background-color: yellow;
+      }
+      .stripes > *:nth-child(2n-1) {
+        background-color: blue;
+        color: white;
+      }
+
+      /* 가상 클래스 선택자 실습(다른경우) */
+      /* .stripes > * {
+        background-color: blue;
+        color: white;
+      }
+      .stripes > div:nth-child(2n) {
+        background-color: yellow;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="stripes">
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+    </div>
+  </body>
+</html>

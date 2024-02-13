@@ -90,24 +90,6 @@
         color: blue;
       }
 
-      /* 가상 클래스 선택자 실습(내거) */
-      .stripes > *:nth-child(2n) {
-        background-color: yellow;
-      }
-      .stripes > *:nth-child(2n-1) {
-        background-color: blue;
-        color: white;
-      }
-
-      /* 가상 클래스 선택자 실습(다른경우) */
-      /* .stripes > * {
-        background-color: blue;
-        color: white;
-      }
-      .stripes > div:nth-child(2n) {
-        background-color: yellow;
-      } */
-
       /* 가상 요소 선택자 */
       /* content 속성이 필수로 작성되어야 함. */
       /* ::before 선택된 요소의 content 앞에 해당 content 값이 들어감 */
@@ -130,14 +112,6 @@
       .div2::after {
         content: "여기는 after 가상 요소 선택자로 입력한 텍스트";
         color: gold;
-      }
-
-      /* 가상 요소 선택자 실습 */
-      .box::before {
-        content: "택시";
-      }
-      .box::after {
-        content: "어서!";
       }
 
       /*  */
@@ -184,24 +158,7 @@
       <li>낙타</li>
     </ul>
 
-    <div class="stripes">
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>navy</div>
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>navy</div>
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-    </div>
-
     <hr />
     <div class="div2">가상 요소 선택자</div>
-
-    <hr />
-    <div class="box">여기요!</div>
   </body>
 </html>

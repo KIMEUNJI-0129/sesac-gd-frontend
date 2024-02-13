@@ -128,7 +128,7 @@
 
 /* max-width와 min-width */
 .parent {
-  width: 500px;
+  width: 600px;
   height: 200px;
   background-color: pink;
 }
@@ -197,4 +197,62 @@
 }
 .border-box {
   box-sizing: border-box;
+}
+
+/* 실습1 */
+.square1 {
+  width: calc(10vw);
+  height: calc(10vh);
+  background-color: blue;
+  margin-left: 50%;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.square1 span {
+  line-height: calc(10vh);
+  background-color: blue;
+  color: white;
+}
+
+* {
+  background-color: beige;
+}
+
+/* 실습2 */
+.line1 {
+  border: solid black;
+  border-width: 5px 10px 15px 20px;
+  border-radius: 0 10px 5px 2px;
+}
+.line2 {
+  border: 5px solid black;
+  border-color: aqua red blue yellowgreen;
+  border-radius: 10px 20px 5px 0px;
+}
+.line3 {
+  border: 5px solid black;
+  border-style: solid dotted double dashed;
+  border-radius: 15px 30px 0px 10px;
+}
+.line4 {
+  border: 5px solid black;
+  border-top: 10px dashed gold;
+  border-right: 5px solid green;
+  border-bottom: 2px dotted violet;
+  border-left: 7px double orange;
+  border-radius: 0px 5px 20px 40px;
+}
+
+.hoveraction {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  text-align: center;
+  line-height: 200px;
+  color: white;
+}
+
+.hoveraction:hover {
+  opacity: 0;
 }

@@ -208,6 +208,11 @@
   margin-top: 300px;
   margin-bottom: 300px;
 }
+/* width: 10vw
+height: 10vh
+margin: calc(50vh - 5vw) auto 0 auto; 
+text-align: center;
+line-height: 10vw*/
 
 .square1 span {
   line-height: calc(10vh);

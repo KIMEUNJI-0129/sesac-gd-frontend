@@ -22,29 +22,36 @@
 
       /* checked */
       input[type="checkbox"]:checked {
-      accent-color: blue;
+        accent-color: blue;
       }
 
-#red1 {
-  padding: 5px;
-}
-#red:checked + #red1 {
+      #red1 {
+        padding: 5px;
+      }
+      /* 색이 변해야하는 곳은 체크박스 다음의 라벨이기때문에
+인접 선택자 + 를 통해서 선택해준다. */
+      /* 굳이 label에 id를 주지 않아도, 다음 label을 불러주면 된다. */
+      /* #red:checked + label {
   background-color: red;
   color: white;
-}
-#blue1 {
-  padding: 5px;
-}
-#blue:checked + #blue1 {
-  background-color: blue;
-  color: white;
-}
-#yellow1 {
-  padding: 5px;
-}
-#yellow:checked + #yellow1 {
-  background-color: yellow;
-}
+} */
+      #red:checked + #red1 {
+        background-color: red;
+        color: white;
+      }
+      #blue1 {
+        padding: 5px;
+      }
+      #blue:checked + #blue1 {
+        background-color: blue;
+        color: white;
+      }
+      #yellow1 {
+        padding: 5px;
+      }
+      #yellow:checked + #yellow1 {
+        background-color: yellow;
+      }
 
       /* active */
       button {

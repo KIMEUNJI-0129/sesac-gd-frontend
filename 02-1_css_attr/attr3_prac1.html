@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background 속성 실습</title>
+    <style>
+      /* 내가 한 실습 */
+      .ground {
+        display: block;
+        width: 800px;
+        height: 500px;
+        background-color: skyblue;
+        margin-bottom: 30px;
+      }
+
+      .back-1 {
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        background-repeat: repeat-x;
+        background-position: center;
+      }
+
+      .back-2 {
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 100px;
+        background-position-y: 30px;
+      }
+
+      .back-3 {
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+      }
+
+      .search-input {
+        padding: 8px 10px 8px 40px;
+        width: 200;
+        height: 100%;
+        border: none;
+        background-color: rgb(227, 227, 227);
+        border-radius: 20px;
+        background-image: url("img/search-icon.png");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+      }
+
+      .search-input:focus {
+        background-color: rgb(206, 206, 206);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="back-1 ground"></div>
+    <div class="back-2 ground"></div>
+    <div class="back-3 ground"></div>
+
+    <div>
+      <input type="text" class="search-input" placeholder="검색" />
+    </div>
+  </body>
+</html>

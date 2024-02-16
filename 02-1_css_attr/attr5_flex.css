@@ -84,44 +84,84 @@
   flex-direction: column;
 }
 
-.item {
+/* .item {
   width: 100px;
   height: 100px;
   font-size: 30px;
   text-align: center;
   line-height: 100px;
-}
+} */
 
-.item1 {
+.container .item1 {
   /* font-size: 20px; */
   background-color: red;
 }
 
-.item2 {
+.container .item2 {
   /* font-size: 40px; */
   background-color: blue;
 }
 
-.item3 {
+.container .item3 {
   background-color: green;
 }
 
-.item4 {
+.container .item4 {
   background-color: yellow;
 }
 
-.item5 {
+.container .item5 {
   background-color: pink;
 }
 
-.item6 {
+.container .item6 {
   background-color: aqua;
 }
 
-.item7 {
+.container .item7 {
   background-color: orange;
 }
 
-.item8 {
+.container .item8 {
   background-color: violet;
+}
+
+/* 아이템 속성 */
+.container2 {
+  background-color: grey;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.container2 .item {
+  /* width: 50px; */
+  height: 50px;
+}
+
+.container2 .item1 {
+  background-color: lightblue;
+}
+
+.container2 .item2 {
+  background-color: lightcoral;
+  align-self: flex-start;
+  order: -1;
+}
+
+.container2 .item3 {
+  background-color: lightcyan;
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+
+.container2 .item4 {
+  background-color: lightgreen;
+  align-self: flex-end;
+  flex-grow: 2;
+}
+
+.container2 .item5 {
+  background-color: lightpink;
 }

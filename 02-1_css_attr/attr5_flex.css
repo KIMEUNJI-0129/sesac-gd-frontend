@@ -7,8 +7,8 @@
 
   /* display: flex; 는 기본적으로 자식 요소들이 왼쪽에서 오른쪽으로 쌓임 */
   /* 즉, 주축의 기본 방향이 좌 -> 우 */
-  /* 주축 : main axis */
-  /* 교차축 : cross axis */
+  /* 주축 : main axis (flex-direction으로 설정한 축이 주축이 된다.) */
+  /* 교차축 : cross axis (주축과 수직으로 만나는 축) */
   display: flex;
   width: 100vw;
   background-color: bisque;
@@ -39,12 +39,49 @@
   -justyfy-content: space-evenly -> star부터 첫 아이템의 간격, 아이템 사이 간격, 마지막 아이템부터 end까지의 모든 간격이 동일
   -justyfy-content: space-between -> 처음과 마지막 아이템을 양 끝에 붙이고, 나머지 아이템 사이 간격을 동일하게 나눔
   */
-  justify-content: flex-end;
-  /* flex-direction: row-reverse 와는 다르다! 순서가 바뀌지 않고, 정렬 방식만 달라지는 것. */
+  /* justify-content: flex-end; */
+  /* flex-direction: row-reverse 와는 다르다! 콘텐츠의 순서가 바뀌지 않고, 정렬 방식만 달라지는 것. */
 
-  justify-content: space-around;
+  /* justify-content: space-around;
   justify-content: space-evenly;
-  justify-content: space-between;
+  justify-content: space-between; */
+
+  /* align-items : 교차축에 대해 item을 어떻게 배치할 것인가 */
+  /* 
+  -align-items: stretch; (default) -> container의 교차축을 모두 채우기 위해 늘림
+  -> 아이템의 높이 또는 너비가 지정되지 않았을 때, 자동으로 교차축을 채우기 위해 늘어남.
+  
+  -align-items: flex-start; -> 교차축의 시작점으로 정렬
+  -> 아이템의 높이나 너비가 지정되었을 때, 자동으로 정렬됨
+  -align-items: flex-end; -> 교차축의 끝점 정렬
+  -align-items: center; -> 교차축의 중앙에 정렬
+  -align-items: baseline; -> 아이템을 텍스트의 베이스라인 기준으로 정렬
+  */
+  height: 500px;
+  /* align-items: flex-start;
+  align-items: center;
+  align-items: baseline; */
+
+  /* align-content -> 줄 바꿈이 일어난 경우, 두 줄 이상에서 교차축 기준으로 아이템들을 뭉쳐서 정렬하는 방법 */
+  /* 조건 : flex-wrap: wrap; 상태에서 아이템이 2줄 이상일 때 교차축 방향을 설정 */
+  /* 
+  -align-content : stretch; (default) -> 교차축 방향으로 모두 차지하기 위해 늘어남
+  -align-content : flex-start; -> 교차축 방향으로 시작점으로 정렬
+  -align-content : flex-end; -> 교차축 방향으로 끝점으로 정렬
+  -align-content : center; -> 교차축 방향으로 중앙에 정렬
+  */
+
+  /* 아이템보다 작은 컨테이너가 있어야 기능을 한다.
+  무조건적으로 flex-wrap과 함께 width 설정을 써야 한다. */
+  /* align들은 언제나 교차축을 기준으로 움직인다!!
+  교차축은 flex-direction으로 결정된 주축에 따라 상대적으로 결정된다. */
+  width: 350px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  flex-direction: column;
 }
 
 .item {
@@ -56,10 +93,12 @@
 }
 
 .item1 {
+  /* font-size: 20px; */
   background-color: red;
 }
 
 .item2 {
+  /* font-size: 40px; */
   background-color: blue;
 }
 
@@ -73,4 +112,16 @@
 
 .item5 {
   background-color: pink;
+}
+
+.item6 {
+  background-color: aqua;
+}
+
+.item7 {
+  background-color: orange;
+}
+
+.item8 {
+  background-color: violet;
 }

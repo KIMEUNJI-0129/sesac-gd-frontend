@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: beige;
+      }
+
+      .item {
+        position: absolute;
+        border-radius: 50px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .item1 {
+        background-color: blue;
+        bottom: 200px;
+        right: 260px;
+      }
+
+      .item2 {
+        background-color: rgb(66, 66, 255);
+        bottom: 150px;
+        right: 200px;
+      }
+
+      .item3 {
+        background-color: rgb(115, 115, 252);
+        bottom: 100px;
+        right: 170px;
+      }
+
+      .item4 {
+        background-color: rgb(134, 134, 255);
+        bottom: 50px;
+        right: 150px;
+      }
+
+      .item5 {
+        background-color: rgb(159, 159, 255);
+        bottom: 30px;
+        right: 100px;
+        z-index: 999;
+      }
+
+      .img {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .eye1 {
+        position: absolute;
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        top: 10px;
+        right: 40%;
+      }
+
+      .eye2 {
+        position: absolute;
+        border-radius: 50px;
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        top: 15px;
+        right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">
+        <div class="eye1">
+          <div class="eye2"></div>
+        </div>
+      </div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+      <img class="img" src="./img/grass.png" alt="잔디" />
+    </div>
+  </body>
+</html>

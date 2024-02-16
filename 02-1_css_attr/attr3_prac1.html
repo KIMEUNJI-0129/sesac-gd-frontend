@@ -35,7 +35,7 @@
         background-position: center top;
       }
 
-      .search-input {
+      input {
         padding: 8px 10px 8px 40px;
         width: 200;
         height: 100%;
@@ -47,9 +47,19 @@
         background-repeat: no-repeat;
         background-position: 10px center;
       }
+      /* outline : focus 했을 때 자동으로 생기는 아웃라인을 지워주는 속성 */
+      input:focus {
+        outline: none;
+      }
 
-      .search-input:focus {
-        background-color: rgb(206, 206, 206);
+      /* input:hover {
+        background-color: gray;
+      } */
+
+      /* 인풋에 포커스 했을 때를 뺀
+      나머지 호버상태에서는 색을 아래와 같이 변화시키겠다! */
+      input:hover:not(input:focus) {
+        background-color: gray;
       }
     </style>
   </head>
@@ -59,7 +69,7 @@
     <div class="back-3 ground"></div>
 
     <div>
-      <input type="text" class="search-input" placeholder="검색" />
+      <input type="text" placeholder="검색" />
     </div>
   </body>
 </html>

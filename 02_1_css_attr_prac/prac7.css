@@ -1,21 +1,108 @@
 * {
   /* 태그에 기본적으로 적용되어 있는 margin,padding 없애기 */
+  margin: 0;
+  padding: 0;
   /* border-box 안주면 검색창 이상해짐 */
   box-sizing: border-box;
 }
 
 header {
   box-shadow: 1px 0 10px rgba(135, 135, 135, 0.461);
+  height: 50px;
 }
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* menu-left */
+a {
+  text-decoration: none;
+}
+
+.logo > a {
+  color: rgb(3, 156, 3);
+}
+
+.menu li a {
+  color: black;
+}
+
+.menu-left {
+  display: flex;
+  margin-left: 40px;
+}
+
+ul.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+  color: black;
+}
+
+.menu li a:hover {
+  color: rgb(3, 156, 3);
+}
+
+/* menu-right */
+.menu-right {
+  display: flex;
+  margin: 0 20px;
+  align-items: center;
+}
+
+input {
+  border: 1px solid rgb(241, 240, 240);
+  background-color: rgb(241, 240, 240);
+  width: 150px;
+  height: 35px;
+  margin-right: -20px;
+  border-radius: 3px;
+}
+
+input:hover:not(input:focus) {
+  border-color: rgb(161, 161, 161);
+}
+
+input:focus {
+  outline-color: rgb(3, 156, 3);
+}
+
 
 header .inner .menu-right .header__search i {
   /* 돋보기 input 안으로 이동시키기*/
   /* 축으로 이동시킴 */
-  transform: translateY(-50%);
+  transform: translateY(-70px);
+  transform: translateX(-10px);
 }
 
 /* btn */
 
 .btn {
   cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid rgb(185, 185, 185);
+  font-weight: 400;
+  margin: 0 0 0 10px;
+}
+
+.btn--white {
+  background-color: white;
+  color: rgb(107, 107, 107);
+}
+
+.btn--red {
+  background-color: rgb(252, 124, 146);
+  color: white;
+  margin-right: 20px;
 }

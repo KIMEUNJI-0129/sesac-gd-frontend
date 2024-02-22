@@ -18,6 +18,7 @@ console.log(varName); // kim 출력
 
 // 변수 선언과 값 할당을 동시에
 var varName2 = "eunji2";
+console.log(varName2);
 
 // var의 이상한 점
 // 1. 변수를 동일한 이름으로 재선언할 수 있음.

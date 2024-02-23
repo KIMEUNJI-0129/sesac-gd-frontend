@@ -49,3 +49,41 @@ console.log(letName2);
 
 //값 재할당은 가능!
 letName2 = "심봉사";
+
+/* 
+const 키워드
+- 반드시 변수 선언과 값 할당이 동시에 이뤄져야 함.
+- 변수 재선언, 재할당 불가능.
+- 사용처 : 변하지 않는 값을 변수에 저장할 때 사용함.
+*/
+// const constName; //선언과 동시에 값 할당이 필요
+const constName = "kimeunji";
+console.log(constName); //kimeunji
+
+/*
+    정리
+    - var : es6 이전에 사용되던 변수 선언 키워드 -> 사용 지양하자!
+    - let : 변수(바뀔 수 있는) 선언 키워드
+        - 변수 선언 -> 값 할당
+        - 변수 중복 선언은 불가능
+        - 변수 재할당은 가능 (값을 수정할 수 있음)
+    -const : 상수(바뀔 수 없는) 선언 키워드
+        - 상수 : 변하지 않는 값
+        - 변수 선언과 값 할당을 동시에 해야 함
+        - 재선언, 재할당 불가능
+
+
+    식별자 규칙
+    : 이름을 지정할 때 사용하는 단어 (변수명,함수명 등)
+    - 키워드 사용 불가
+        - 키워드 : 특별한 역할을 이미 하고 있는 단어
+        - ex) var, let, const, if, function, for, return, ...
+    - 숫자로 시작 불가
+    - 특수문자는 '_', '$' 기호만 허용
+    - 공백 문자 사용 불가
+
+    사용 가능한 식별자
+    kimeunji, sweet123, my_name, money$, menu_bar, a, myName
+    사용 불가능한 식별자
+    var, let, const, 1st, *star, my name
+*/

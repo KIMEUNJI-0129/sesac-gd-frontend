@@ -91,3 +91,20 @@ function hello(name) {
 }
 const userName = 'lucy';
 hello(userName);
+
+// 실습 과제
+// multifly 함수 만들기
+function multifly(num1, num2) {
+  return num1 * num2;
+  console.log('aa'); // return 문 다음 코드는 실행하지 않음
+}
+
+console.log(multifly(7, 3)); // 21
+console.log(multifly(4, 10)); // 40
+
+//square 함수 만들기
+function square(num) {
+  return num ** 2;
+}
+
+console.log(square(4));

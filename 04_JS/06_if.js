@@ -241,6 +241,13 @@ isLoggedIn === true
     : '로그인한 유저인데, number 값이 10보다 작음'
   : '로그인하지 않은 유저입니다.';
 
+// 실습 오전 / 오후 출력하기
+let now = new Date().getHours();
+console.log(now);
+
+now - 11 > 0 ? console.log('오후') : console.log('오전');
+console.log(now < 12 ? '오전' : '오후');
+
 // **리더님 강의 코드**
 // console.log('connected');
 

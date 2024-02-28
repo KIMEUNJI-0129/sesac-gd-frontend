@@ -145,3 +145,79 @@ console.log(arr2.join()); // 인자를 작성하지 않으면 배열 안의 콤�
 console.log(typeof arr2.join());
 console.log(arr2.join('')); // 빈 문자열 작성 시 모든 요소가 붙어서 문자열로 변환
 console.log(arr2.join(' 그리고 ')); // 문자 사이에 '그리고' 를 삽입해서 문자열로 반환
+
+// ---------------------------------------------------------------------------------
+// 배열에서의 반복문
+// for 사용
+console.log('---------------for 반복---------------');
+let arr3 = [1, 2, 3, 4, 5];
+let alphabets = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+for (let i = 0; i < arr3.length; i++) {
+  console.log(arr3[i]);
+}
+
+console.log('----------------for of--------------');
+// for of 사용
+// 여기서 number는 for of 문에서 내가 지어준 변수명
+// 무엇을 의미하는지 알 수 있도로고 작성
+// index 번호로 순환하는 것이 아니라 배열 요소에 직접 접근
+for (let number of arr3) {
+  console.log(number);
+}
+
+for (let alphabet of alphabets) {
+  console.log(alphabet);
+}
+
+// forEach
+// 매개변수 3개를 받는 배열의 반복을 위한 메서드(=함수)
+// 매개변수 이름은 마음대로 지어도 상관 없지만 순서에 따른 의미는 항상 동일 (순서가 중요!)
+/*
+    arr.forEach(function (요소를 지칭할 별명[, index를 지칭할 별명, arr를 지칭할 별명]) {})
+*/
+arr3.forEach(function (num, idx) {
+  console.log(num, idx);
+  //   console.log('num :', num);
+  //   console.log('idx :', idx);
+});
+
+// -----------------------------------------------------------------------------------
+// filter()
+// 조건을 만족하는 요소들을 "배열"로 반환
+// arr2의 요소 중 길이가 5자 이상인 요소만 모아 새로운 배열 만들기
+console.log('filter 메서드 사용');
+let newArr2 = arr2.filter(function (animal) {
+  return animal.length >= 5;
+});
+
+// 화살표 함수 작성 예시
+let newArr3 = arr2.filter((animal) => {
+  return animal.length >= 5;
+});
+let newArr4 = arr2.filter((animal) => animal.length >= 5); // 리턴값이 1개만 있다면 매우 간단하게 작성할 수 있다.
+console.log(newArr2); // ['capybara', 'panda', 'quakka']
+console.log(arr2); // ['capybara', 'dog', 'panda', 'quakka'] -> 원래 배열 자체에는 변화가 없다!
+
+const words = ['미어캣', '호랑이', '악어', '유니콘', '용', '라쿤'];
+const newWords = words.filter(function (ani) {
+  return ani.charAt(0) === '라' || ani.charAt(0) === '유';
+});
+
+console.log(newWords);
+
+// find() : 배열에서 특정 조건을 만족하는 첫번째 요소 반환
+// filler와 비슷하게 조건 작성하지만, 배열을 반환하는 것이 아닌 조건을 처음 만족하는 "값"을 반환
+let findResult = words.find(function (ani) {
+  return ani.charAt(0) === '악';
+});
+console.log(findResult); // '악어'
+
+// map() : 배열 내의 모든 원소에 대해 호출한 함수의 결과를 모아 새로운 배열 반환
+// arr.map(function (value[, index[, arr]]) {}) -> forEach 와 동일! 순서가 매우 중요!
+// 배열의 모든 원소를 for문으로 돌려서 바꿀 수 있지만 더 간단히 메소드를 사용해 변경 가능
+let nums = [1, 2, 3, 4, 5];
+let mapArr = nums.map(function (n) {
+  return n * 100;
+});
+console.log(mapArr); // [100, 200, 300, 400, 500]

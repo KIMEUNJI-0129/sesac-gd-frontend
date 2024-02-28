@@ -100,7 +100,8 @@
     <h2>Q6. 다음 중 변수를 올바르게 선언한 것은?</h2>
     <ol>
       <li><code>v userId;</code></li>
-      <li class="check"><code>const userId;</code></li>
+      <!-- v=userId; =이 필요하다. -->
+      <li><code>const userId;</code></li>
       <li class="check"><code>let userId;</code></li>
       <li><code>string userId;</code></li>
     </ol>
@@ -109,8 +110,10 @@
     <h2>Q7. boolean 변수를 선언하는 방식으로 옳은 것은?</h2>
     <ol>
       <li><code>let isWater = True;</code></li>
+      <!-- T가 대문자 -->
       <li class="check"><code>let isWater = true;</code></li>
       <li><code>let isWater = 'True';</code></li>
+      <!-- 따옴표 : 데이터타입이 string이 되어버림 -->
       <li><code>let isWater = 'true';</code></li>
     </ol>
     <hr />
@@ -118,9 +121,13 @@
     <h2>Q8. 다음 중 변수에 값을 할당하는 연산자는?</h2>
     <ol>
       <li class="check"><code>=</code></li>
+      <!-- 할당 연산자 -->
       <li><code>==</code></li>
+      <!-- 동등 연산자 : 앞과 뒤가 같다 -->
       <li><code>===</code></li>
+      <!-- 동등 연산자 : 앞과 뒤의 값의 동일함과 타입까지 보는 좀 더 엄격한 버전 -->
       <li><code>-</code></li>
+      <!-- 빼기 연산자 -->
     </ol>
     <hr />
 
@@ -128,6 +135,7 @@
     <ol>
       <li>O</li>
       <li class="check">X</li>
+      <!-- 이름이 비슷할 뿐이지 완전히 다른 언어이다. -->
     </ol>
     <hr />
 
@@ -135,6 +143,7 @@
     <img src="./image/img1.png" alt="보기" />
     <ol>
       <li class="check">SeoulMapo</li>
+      <!-- + 연산자 : 공백없이 두 문자열이 바로 붙게 된다. -->
       <li>Seoul Mapo</li>
       <li>Seoul</li>
       <li>Mapo</li>
@@ -144,7 +153,8 @@
     <h2>Q11. 다음 대화창을 출력하는 함수는 무엇인가?</h2>
     <img src="./image/img2.png" alt="보기" />
     <ol>
-      <li class="check"><code>alert('아이디는?')</code></li>
+      <li><code>alert('아이디는?')</code></li>
+      <!-- 알림창만 보여주고 확인만 있다! 입력값을 받지 않는다. -->
       <li><code>window('아이디는?')</code></li>
       <li class="check"><code>prompt('아이디는?')</code></li>
       <li><code>confirm('아이디는?')</code></li>
@@ -158,25 +168,34 @@
     </div>
     <ol>
       <li><code>2user</code></li>
+      <!-- 숫자는 맨 앞에 올 수 없음 -->
       <li class="check"><code>User</code></li>
+      <!-- 사용은 가능 but 관례를 지키지 않은 식별자 -->
       <li class="check"><code>USER3</code></li>
       <li><code>*USER3</code></li>
+      <!-- * 사용 안 됨 '_' '$' 만 사용 가능 -->
       <li class="check"><code>USER_</code></li>
       <li><code>let</code></li>
+      <!-- let : 예약어 -->
       <li class="check"><code>_</code></li>
       <li><code>*</code></li>
+      <!-- * 사용 안 됨 -->
       <li class="check"><code>$</code></li>
       <li><code>new user</code></li>
+      <!-- 공백 불가 -->
       <li class="check"><code>new_user</code></li>
       <li class="check"><code>$new_user</code></li>
       <li><code>const</code></li>
+      <!-- const : 예약어 -->
     </ol>
     <hr />
 
     <h2>Q13. Javascript에서 함수를 만드는 방법으로 옳은 것은?</h2>
     <ol>
       <li><code>function = myFunction()</code></li>
+      <!-- =은 앞에서 변수를 선언해주고나서 값을 할당해주는 것 -->
       <li class="check"><code>function myFunction()</code></li>
+      <!-- 정답 -->
       <li><code>function:myFunction()</code></li>
       <li><code>def myFunction():</code></li>
     </ol>
@@ -196,6 +215,7 @@
     <h2>Q15. <code>Boolean(10 > 9)</code> 코드가 반환하는 값은?</h2>
     <ol>
       <li class="check"><code>true</code></li>
+      <!-- 10 > 9 참이기때문에 true가 나온다. -->
       <li><code>false</code></li>
       <li><code>NaN</code></li>
     </ol>
@@ -204,18 +224,26 @@
     <h2>Q16. 다음 중 결과가 다른 하나는?</h2>
     <ol>
       <li><code>!true</code></li>
+      <!-- false -->
       <li><code>true && false</code></li>
+      <!-- false -->
       <li class="check"><code>true || false</code></li>
+      <!-- or : 둘 중 하나만 true가 있어서 true -->
       <li><code>!!false && (3 > 5)</code></li>
+      <!-- false -->
     </ol>
     <hr />
 
     <h2>Q17. 다음 중 결과가 다른 하나는?</h2>
     <ol>
-      <li><code>3 !== '3'</code></li>
-      <li class="check"><code>(8 / '2') !== 4</code></li>
+      <li class="check"><code>3 !== '3'</code></li>
+      <!-- true : 같지 않다!! 맞다!! true -->
+      <li><code>(8 / '2') !== 4</code></li>
+      <!-- false : 자바스크립트는 자기 멋대로 숫자로 생각해서 / 를 해버리고 4가 나온다. 4와 4는 같기 때문에 false -->
       <li><code>0 === false</code></li>
+      <!-- false -->
       <li><code>('1' + 2) === 12</code></li>
+      <!-- +는 문자열로 바꿔서 더해진다. 타입이 달라지기 때문에 숫자 12와는 다르다. false -->
     </ol>
     <hr />
 
@@ -234,6 +262,7 @@
     <ol>
       <li><code>if (i <> 7)</code></li>
       <li class="check"><code>if (i !== 7)</code></li>
+      <!-- 부정 연산자 !== -->
       <li><code>if (i =! 7) then</code></li>
       <li><code>if i != 7:</code></li>
     </ol>

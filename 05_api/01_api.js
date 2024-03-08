@@ -306,3 +306,49 @@ async function getMovieData() {
     ul.append(div);
   }
 }
+
+//=============================================================
+
+// JSONPlaceholder API 사용해 가짜 데이터로 CRUD 작업하기
+// JSONPlaceholder API : json 형태의 mock data(더미 데이터)를 주는 open API
+
+// get 요청
+// 특정 게시물을 가져오는 함수
+const getPost = () => {
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
+};
+
+// post 요청
+// 게시글 등록하는 함수
+const postPost = () => {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: '제목제목제목', // 인풋이나 텍스트에리어에서 받아서 사용해야 함.
+      body: '게시글 내용내용내용',
+      userId: 1,
+    }),
+
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => {
+      console.log('err:', err);
+    });
+};
+
+const deletePost = () => {
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'DELETE',
+  })
+    .then((response = response.json()))
+    .then((data) => console.log('DELETE!'))
+    .catch((err) => console.log('delete err : ', err));
+};

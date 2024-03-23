@@ -1,0 +1,31 @@
+.banner {
+  width: 1080px;
+  height: 200px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  border: 1px solid #f07579;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+}
+
+.right-side {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+#ad-image {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.right-side span {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #000000;
+}

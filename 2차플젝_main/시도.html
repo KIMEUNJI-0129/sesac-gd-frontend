@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./시도.css" />
+  </head>
+  <body>
+    <div class="dash-board container-1160 places-section">
+      <div class="board cards">
+        <div class="title">
+          <span>요즘 뜨는 장소들</span>
+          <div class="sub">진짜서울에서 사랑받는 장소들을 소개합니다.</div>
+        </div>
+        <div class="places" id="placesList">
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(6617); trackOutboundLink('main_page','place_recommend','most-recent'); trackOutboundLink('home_cta','place_click','카페꼼마 합정점');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">카페꼼마 합정점</div>
+                    <div class="address">서울 마포구 합정동 441-35</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">
+                      💻 혼자 노트북들고 작업하러 가기 좋은 곳
+                    </div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: happy; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="happy"
+                      >
+                        <circle cx="13" cy="7" r="1"></circle>
+                        <circle cx="7" cy="7" r="1"></circle>
+                        <circle
+                          fill="none"
+                          stroke="#000"
+                          cx="10"
+                          cy="10"
+                          r="8.5"
+                        ></circle>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          d="M14.6,11.4 C13.9,13.3 12.1,14.5 10,14.5 C7.9,14.5 6.1,13.3 5.4,11.4"
+                        ></path></svg
+                    ></span>
+                    <span>최근 추천 받았어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(2400); trackOutboundLink('main_page','place_recommend','most-saved'); trackOutboundLink('home_cta','place_click','왈이의 마음단련장');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">왈이의 마음단련장</div>
+                    <div class="address">서울 용산구 이태원동 261-61</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">😌🌿 밀레니얼을 위한 명상</div>
+                    <div class="theme">⛰ 남산자락 나만의 숨은 공간</div>
+                    <div class="theme">🤓 영감얻기 좋은 장소</div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: heart; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="heart"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.03"
+                          d="M10,4 C10,4 8.1,2 5.74,2 C3.38,2 1,3.55 1,6.73 C1,8.84 2.67,10.44 2.67,10.44 L10,18 L17.33,10.44 C17.33,10.44 19,8.84 19,6.73 C19,3.55 16.62,2 14.26,2 C11.9,2 10,4 10,4 L10,4 Z"
+                        ></path></svg
+                    ></span>
+                    <span>많은 사람들이 저장했어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(43); trackOutboundLink('main_page','place_recommend','most-polular'); trackOutboundLink('home_cta','place_click','소점');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">소점</div>
+                    <div class="address">서울 마포구 연남동 487-278</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">
+                      🍺 하이볼 마시고 싶은 날 가기 좋은 곳
+                    </div>
+                    <div class="theme">💘 연남동 뽀개기</div>
+                    <div class="theme">🧆🦑 일본 현지맛 그대로 타코야끼</div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: users; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="users"
+                      >
+                        <circle
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          cx="7.7"
+                          cy="8.6"
+                          r="3.5"
+                        ></circle>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          d="M1,18.1 C1.7,14.6 4.4,12.1 7.6,12.1 C10.9,12.1 13.7,14.8 14.3,18.3"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          d="M11.4,4 C12.8,2.4 15.4,2.8 16.3,4.7 C17.2,6.6 15.7,8.9 13.6,8.9 C16.5,8.9 18.8,11.3 19.2,14.1"
+                        ></path></svg
+                    ></span>
+                    <span>많은 큐레이터들이 추천했어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(239); trackOutboundLink('main_page','place_recommend','most-polular'); trackOutboundLink('home_cta','place_click','당인리책발전소');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">당인리책발전소</div>
+                    <div class="address">서울 마포구 서교동 475-26</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">📚 도서관 같은 공부하기 좋은 카페</div>
+                    <div class="theme">
+                      💻 혼자 노트북들고 작업하러 가기 좋은 곳
+                    </div>
+                    <div class="theme">📚 큐레이션이 좋은 동네서점</div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: users; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="users"
+                      >
+                        <circle
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          cx="7.7"
+                          cy="8.6"
+                          r="3.5"
+                        ></circle>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          d="M1,18.1 C1.7,14.6 4.4,12.1 7.6,12.1 C10.9,12.1 13.7,14.8 14.3,18.3"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.1"
+                          d="M11.4,4 C12.8,2.4 15.4,2.8 16.3,4.7 C17.2,6.6 15.7,8.9 13.6,8.9 C16.5,8.9 18.8,11.3 19.2,14.1"
+                        ></path></svg
+                    ></span>
+                    <span>많은 큐레이터들이 추천했어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(10012); trackOutboundLink('main_page','place_recommend','most-recent'); trackOutboundLink('home_cta','place_click','튜링의사과');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">튜링의사과</div>
+                    <div class="address">서울 성동구 성수동1가 14-35</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">
+                      💻 혼자 노트북들고 작업하러 가기 좋은 곳
+                    </div>
+                    <div class="theme">
+                      🧑‍💻👨‍💻👩‍💻 혼자 코딩하기좋은 (가성비) 카페
+                    </div>
+                    <div class="theme">
+                      💻 카페가 부담일때 1~2시간 사용하기 좋은 작업공간
+                    </div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: happy; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="happy"
+                      >
+                        <circle cx="13" cy="7" r="1"></circle>
+                        <circle cx="7" cy="7" r="1"></circle>
+                        <circle
+                          fill="none"
+                          stroke="#000"
+                          cx="10"
+                          cy="10"
+                          r="8.5"
+                        ></circle>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          d="M14.6,11.4 C13.9,13.3 12.1,14.5 10,14.5 C7.9,14.5 6.1,13.3 5.4,11.4"
+                        ></path></svg
+                    ></span>
+                    <span>최근 추천 받았어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(239); trackOutboundLink('main_page','place_recommend','most-saved'); trackOutboundLink('home_cta','place_click','당인리책발전소');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">당인리책발전소</div>
+                    <div class="address">서울 마포구 서교동 475-26</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">📚 도서관 같은 공부하기 좋은 카페</div>
+                    <div class="theme">
+                      💻 혼자 노트북들고 작업하러 가기 좋은 곳
+                    </div>
+                    <div class="theme">📚 큐레이션이 좋은 동네서점</div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: heart; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="heart"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.03"
+                          d="M10,4 C10,4 8.1,2 5.74,2 C3.38,2 1,3.55 1,6.73 C1,8.84 2.67,10.44 2.67,10.44 L10,18 L17.33,10.44 C17.33,10.44 19,8.84 19,6.73 C19,3.55 16.62,2 14.26,2 C11.9,2 10,4 10,4 L10,4 Z"
+                        ></path></svg
+                    ></span>
+                    <span>많은 사람들이 저장했어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(10037); trackOutboundLink('main_page','place_recommend','most-recent'); trackOutboundLink('home_cta','place_click','잠수교집 2호점');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">잠수교집 2호점</div>
+                    <div class="address">서울 용산구 용산동2가 39-17</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: happy; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="happy"
+                      >
+                        <circle cx="13" cy="7" r="1"></circle>
+                        <circle cx="7" cy="7" r="1"></circle>
+                        <circle
+                          fill="none"
+                          stroke="#000"
+                          cx="10"
+                          cy="10"
+                          r="8.5"
+                        ></circle>
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          d="M14.6,11.4 C13.9,13.3 12.1,14.5 10,14.5 C7.9,14.5 6.1,13.3 5.4,11.4"
+                        ></path></svg
+                    ></span>
+                    <span>최근 추천 받았어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="list_item">
+            <a
+              class="recommended swiper-slide"
+              href="javascript:void(0);"
+              onclick="restore_modal(347); trackOutboundLink('main_page','place_recommend','most-saved'); trackOutboundLink('home_cta','place_click','테라로사 포스코센터점');; "
+            >
+              <div class="place-card border-radius shadow">
+                <div class="content">
+                  <div class="desc">
+                    <div class="name">테라로사 포스코센터점</div>
+                    <div class="address">서울 강남구 대치동 892</div>
+                  </div>
+                  <div class="themes">
+                    <div class="theme">☁️ 천장이 높아서 기분좋은 카페</div>
+                    <div class="theme">
+                      🤔 3~4명이 함께 회의하며 일하기 좋은 곳
+                    </div>
+                    <div class="theme">
+                      🧑‍💻 하루종일 있어도 눈치 보이지 않는 카페
+                    </div>
+                  </div>
+                  <div class="info">
+                    <span uk-icon="icon: heart; ratio: 0.7" class="uk-icon"
+                      ><svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-svg="heart"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="1.03"
+                          d="M10,4 C10,4 8.1,2 5.74,2 C3.38,2 1,3.55 1,6.73 C1,8.84 2.67,10.44 2.67,10.44 L10,18 L17.33,10.44 C17.33,10.44 19,8.84 19,6.73 C19,3.55 16.62,2 14.26,2 C11.9,2 10,4 10,4 L10,4 Z"
+                        ></path></svg
+                    ></span>
+                    <span>많은 사람들이 저장했어요.</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="image-waiting" style="display: none">
+            <div
+              class="image-waiting spinner-cover uk-flex uk-flex-center uk-flex-middle"
+            >
+              <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <!-- <div class="text">잠시만 기다려주세요.</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

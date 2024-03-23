@@ -1,0 +1,75 @@
+.main-cover .dash-board.places-section {
+  padding-top: 35px;
+}
+
+.dash-board {
+  margin: 100px auto 50px;
+  text-align: left;
+  padding: 0 40px;
+}
+
+.container-1160 {
+  padding: 0 30px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.main-cover .dash-board .board {
+  position: relative;
+}
+
+.dash-board .board.cards .title {
+  position: absolute;
+  top: -80px;
+  left: 0px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.dash-board .board.cards .places {
+  display: flex;
+  overflow-x: scroll;
+  height: 200px;
+}
+
+A:link {
+  text-decoration: none;
+  color: inherit;
+  background: inherit;
+}
+
+a,
+.uk-link {
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-cover .dash-board .board.cards .places .place-card {
+  width: 264px;
+  position: relative;
+  margin-right: 8px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.shadow {
+  transition: all 0.2s;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.border-radius {
+  border-radius: 12px;
+}

@@ -22,6 +22,15 @@ body {
   font-style: normal;
 }
 
+/* 글씨 색상 */
+.font-color {
+  color: #f07579;
+}
+
+.font-point-color {
+  color: #ce3536;
+}
+
 /* 커서 */
 #cursor {
   position: absolute;
@@ -40,7 +49,6 @@ main {
 }
 
 .main-section {
-  padding: 40px 0 40px 0;
   text-align: center;
   font-size: 15px;
   position: relative;
@@ -54,10 +62,13 @@ main {
   height: 450px;
 }
 
-/* ========메인 인터뷰======== */
-.main-section.cafe-interview {
-  padding-bottom: 100px;
+/* ========사장님 컨택======== */
+.ceo-contact {
+  padding-bottom: 50px;
+  padding-left: 18%;
 }
+
+/* ========메인 인터뷰======== */
 
 form {
   display: block;
@@ -139,11 +150,13 @@ form {
 }
 
 .cafe-tag-title {
+  padding-left: 13px;
   font-weight: 800;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cafe-tag-subtitle {
+  padding-left: 13px;
   font-size: small;
   opacity: 70%;
 }
@@ -154,6 +167,7 @@ form {
 
 .cards.filter-list-cards {
   height: auto;
+  margin-left: 3px;
 }
 
 .cards {

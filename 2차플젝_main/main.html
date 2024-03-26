@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카페로_메인</title>
     <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./main_카페찾기버튼.css" />
+    <link rel="stylesheet" href="./main_cafe_search_btn.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,15 +20,23 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
 "
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ======상단배너====== -->
+    <link rel="stylesheet" href="./배너.css" />
+
+    <!-- 내부 스타일 -->
     <style>
       body {
-        background: linear-gradient(to bottom, #f07579 900px, beige 500px);
+        background: linear-gradient(to bottom, #f07579 800px, beige 500px);
         margin: 0;
         padding: 0;
         height: fit-content;
       }
     </style>
   </head>
+  <script src="./배너.js"></script>
   <body>
     <!-- 마우스 커서 -->
     <div id="cursor" style="top: 1060px; left: 996px"></div>
@@ -37,38 +45,33 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
     <!-- 메인 -->
     <main>
       <!-- 카페 광고 섹션 -->
-      <section class="main-section cafe-add">
-        <div uk-slideshow="animation: push">
-          <div
-            class="banner uk-position-relative uk-visible-toggle uk-light"
-            tabindex="-1"
-          >
-            <ul class="uk-slideshow-items">
-              <li>
-                <img src="./img/img/제3화원 카페.PNG" alt="" uk-cover />
-              </li>
-              <li>
-                <img src="./img/img/올덴브라운 카페.PNG" alt="" uk-cover />
-              </li>
-              <li>
-                <img src="./img/img/너프카페.PNG" alt="" uk-cover />
-              </li>
-            </ul>
-            <a
-              class="uk-position-center-left uk-position-small uk-hidden-hover"
-              href
-              uk-slidenav-previous
-              uk-slideshow-item="previous"
-            ></a>
-            <a
-              class="uk-position-center-right uk-position-small uk-hidden-hover"
-              href
-              uk-slidenav-next
-              uk-slideshow-item="next"
-            ></a>
-          </div>
+      <section class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./img/img/배너1.png" style="width: 100%" />
         </div>
+
+        <div class="mySlides fade">
+          <img src="./img/img/배너2.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./img/img/배너3.png" style="width: 100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
+      <br />
+
+      <section style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </section>
+
+      <script>
+        showSlides(slideIndex);
+      </script>
 
       <!-- 지도에서 카페 찾기 섹션 -->
       <section class="main-section cafe-search">
@@ -91,7 +94,7 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
                   onclick="trackOutboundLink('home_cta','btn_click','검색icon');"
                 >
                   <!-- 돋보기 아이콘 넣기 -->
-                  <img src="" alt="검색" />
+                  <img src="./img/img/검색아이콘.png" alt="검색" />
                 </button>
               </form>
             </div>
@@ -107,7 +110,13 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
       </section>
 
       <!-- 태그별 카페 찾기 섹션 -->
-      <section class="main-section cafe-search-tag">
+      <section
+        class="main-section cafe-search-tag"
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        data-aos-anchor
+      >
         <div class="cafe-tag-header text-white">
           <div class="cafe-tag-title">태그로 카페 찾기</div>
           <div class="cafe-tag-subtitle">원하는 태그의 카페를 찾아보세요.</div>
@@ -122,12 +131,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
-                <div class="sentence card-sentence">콘센트 부자 가보자</div>
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
+                <div class="sentence card-sentence">콘센트 얼마나 많게요?</div>
                 <div class="curators">
                   <span class="curator">💻 카공족 모여라</span>
                   <span class="divider">|</span>
-                  <span>#콘센트#카공족</span>
+                  <span class="font-point-color">#콘센트#카공족</span>
                 </div>
               </div>
             </a>
@@ -139,12 +150,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">탁 트이는 넓은 공간감</div>
                 <div class="curators">
                   <span class="curator">✨ 넓고 쾌적해요</span>
                   <span class="divider">|</span>
-                  <span>#카페공간</span>
+                  <span class="font-point-color">#카페공간</span>
                 </div>
               </div>
             </a>
@@ -156,12 +169,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">뉴힙플레이스 감성 카페</div>
                 <div class="curators">
                   <span class="curator">🕶 힙함이 흘러넘친다</span>
                   <span class="divider">|</span>
-                  <span>#감성</span>
+                  <span class="font-point-color">#감성</span>
                 </div>
               </div>
             </a>
@@ -173,12 +188,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">직원이 친절해요</div>
                 <div class="curators">
                   <span class="curator">😋 커피도 맛있다</span>
                   <span class="divider">|</span>
-                  <span>#직원친절</span>
+                  <span class="font-point-color">#직원친절</span>
                 </div>
               </div>
             </a>
@@ -190,12 +207,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">커피 with 좋은 음악</div>
                 <div class="curators">
                   <span class="curator">🎹 품위있는 클래식과 함께</span>
                   <span class="divider">|</span>
-                  <span>#음악#클래식</span>
+                  <span class="font-point-color">#음악#클래식</span>
                 </div>
               </div>
             </a>
@@ -207,12 +226,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">커피 with 좋은 음악</div>
                 <div class="curators">
                   <span class="curator">😎 내적댄스 뿜뿜</span>
                   <span class="divider">|</span>
-                  <span>#음악#댄스</span>
+                  <span class="font-point-color">#음악#댄스</span>
                 </div>
               </div>
             </a>
@@ -224,12 +245,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">애견,애묘인 플레이스</div>
                 <div class="curators">
                   <span class="curator">🐕🐈 털복숭이 친구들</span>
                   <span class="divider">|</span>
-                  <span>#애견#애묘</span>
+                  <span class="font-point-color">#애견#애묘</span>
                 </div>
               </div>
             </a>
@@ -241,12 +264,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">유레카! 카페 메카</div>
                 <div class="curators">
                   <span class="curator">☕ 와글와글 모여있어요</span>
                   <span class="divider">|</span>
-                  <span>#카페거리</span>
+                  <span class="font-point-color">#카페거리</span>
                 </div>
               </div>
             </a>
@@ -258,12 +283,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
               onclick="trackOutboundLink();"
               style="text-decoration: none; color: black"
             >
-              <div class="card filter-list-card border-radius shadow">
+              <div
+                class="card filter-list-card border-radius shadow font-color"
+              >
                 <div class="sentence card-sentence">불철주야 커피홀릭</div>
                 <div class="curators">
                   <span class="curator">⏲ 요즘 찾기 힘든 24시</span>
                   <span class="divider">|</span>
-                  <span>#24시</span>
+                  <span class="font-point-color">#24시</span>
                 </div>
                 <!-- <div class="curators">7개의 장소</div> -->
               </div>
@@ -272,10 +299,25 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
         </ul>
       </section>
 
-      <section class="main-section cafe-hot-place"></section>
+      <!-- 사장님 컨택 -->
+      <section
+        class="ceo-contact"
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
+        <a href="#">
+          <img src="./img/img/사장님 배너.png" alt="사장님 컨택배너" />
+        </a>
+      </section>
 
       <!-- 인터뷰 섹션 -->
-      <section class="main-section cafe-interview">
+      <section
+        class="main-section cafe-interview"
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
         <div class="inner">
           <div class="cafe-interview-left">
             <div class="cafe-interview-left-header">
@@ -345,14 +387,14 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
         </div>
       </section>
 
-      <!-- 사장님 컨택 -->
-      <section class="main-section ceo-contact">
-        사장님 컨택하는 포스터 넣을 것.
-      </section>
-
       <!-- 하단 이미지 섹션 -->
       <section class="main-section identity__wrap">
-        <div class="inner">
+        <div
+          class="inner"
+          data-aos="slide-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <div class="identity__hd">
             <img src="./img/img/2x/중간 문구.png" alt="카페로" />
           </div>
@@ -362,5 +404,8 @@ https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css
         </div>
       </section>
     </main>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

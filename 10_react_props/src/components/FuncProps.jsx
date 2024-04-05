@@ -118,6 +118,6 @@ export default function FuncProps(props) {
 */
 
 // 많은 요소 전달
-export default function FuncProps(props) {
-  return <>{props.children}</>;
-}
+// export default function FuncProps(props) {
+//   return <>{props.children}</>;
+// }

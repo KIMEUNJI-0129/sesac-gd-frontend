@@ -1,5 +1,7 @@
 import FuncProps from './components/FuncProps';
 import ClassProps from './components/ClassProps';
+import FoodProps from './components/FoodProps';
+import BookProps from './components/BookProps';
 import './App.css';
 
 function App() {
@@ -45,6 +47,23 @@ function App() {
 
       {/* isRequired 사용 */}
       <ClassProps drink="초코라떼" />
+
+      {/* -------------------------------------------------------------------- */}
+
+      {/* 랜덤 만들기 */}
+
+      {/* -------------------------------------------------------------------- */}
+
+      {/* 실습1 */}
+      <FoodProps food="pasta" />
+
+      {/* 실습2 */}
+      <BookProps
+        title="나의 하루는 4시40분에 시작된다."
+        author="김유진"
+        price={13500}
+        type="자기계발서"
+      ></BookProps>
     </div>
   );
 }

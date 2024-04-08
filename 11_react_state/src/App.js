@@ -9,7 +9,6 @@ function App() {
       <FuncState></FuncState>
 
       <CharacterContainer></CharacterContainer>
-      <CharacterInfo></CharacterInfo>
     </div>
   );
 }
